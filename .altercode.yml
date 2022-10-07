@@ -1,0 +1,6 @@
+scripts:
+  build:
+    description: Build docker image
+    powershell: false
+    script:
+    - docker build -t altercode/astroneer-linux .
