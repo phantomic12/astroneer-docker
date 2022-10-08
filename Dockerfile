@@ -37,5 +37,7 @@ EXPOSE 8777/udp
 
 COPY entrypoint.sh /entrypoint.sh
 
+VOLUME ["/astroneer/Astro/Saved/SaveGames"]
+
 ENTRYPOINT ["/entrypoint.sh"]
 
