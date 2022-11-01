@@ -3,6 +3,7 @@
 This image is meant to be deployed to a remote server (eg kubernetes) but you can also use it locally.
 
 ## Requirements
+
 Docker
 
 ## Getting started
@@ -12,7 +13,6 @@ Run the latest docker image
 ```
 docker run -ti -e OWNER_NAME=yoursteamname -e OWNER_GUID=yoursteamguid -p 30877:30877/udp  registry.gitlab.com/altercode/astroneer-linux:latest
 ```
-This will start a
 
 Replace _yoursteamname_ and _yoursteamguid_ with your values
 
@@ -21,7 +21,7 @@ Replace _yoursteamname_ and _yoursteamguid_ with your values
 We are also using [crudini](https://github.com/pixelb/crudini) to set some stuff on astroneer ini files
 
 ## Notes
-This is under active development
+This image is under active development
 
 ## File a issue
 Feel free to contribuite adding an issue here: https://gitlab.com/altercode/astroneer-linux/-/issues/new
