@@ -36,6 +36,7 @@ EXPOSE 30877/tcp
 EXPOSE 30877/udp
 
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 VOLUME ["/astroneer/Astro/Saved/SaveGames"]
 
