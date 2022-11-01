@@ -32,8 +32,8 @@ RUN winetricks sound=pulse
 
 RUN usermod -aG pulse,pulse-access root
 
-EXPOSE 8777/tcp
-EXPOSE 8777/udp
+EXPOSE 30877/tcp
+EXPOSE 30877/udp
 
 COPY entrypoint.sh /entrypoint.sh
 
