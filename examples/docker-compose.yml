@@ -1,0 +1,9 @@
+
+version: "3.9"
+services:
+  server:
+    image: registry.gitlab.com/altercode/astroneer-linux:latest
+    volumes:
+      - ./saves:/astroneer/Astro/Saved/SaveGames
+    ports:
+      - "30877:30877"
