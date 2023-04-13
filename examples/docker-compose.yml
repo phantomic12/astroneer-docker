@@ -1,9 +1,14 @@
-
 version: "3.9"
 services:
   server:
     image: registry.gitlab.com/altercode/astroneer-linux:latest
     volumes:
       - ./saves:/astroneer/Astro/Saved/SaveGames
+      # Uncomment this if you want also the server configs to be mounted
+      #- ./configs:/astroneer/Astro/Saved/Config/WindowsServer
+    environment:
+      OWNER_NAME: 'yoursteamname'
+      OWNER_GUID: '0'
     ports:
-      - "30877:30877"
+      - "30877:30877/udp"
+      - "30877:30877/tcp"
