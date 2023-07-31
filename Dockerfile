@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 
-ENV TIMEZONE=Europe/Rome \
+ENV TIMEZONE=America\New_York \
     DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && \
