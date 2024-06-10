@@ -1,6 +1,6 @@
 name: ci
 
-on:  # yamllint disable-line rule:truthy
+n:  # yamllint disable-line rule:truthy
   push:
     branches:
       - master
