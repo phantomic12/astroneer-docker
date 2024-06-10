@@ -1,0 +1,29 @@
+name: ci
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches:
+      - master
+  pull_request:
+  schedule:
+    - cron: "37 13 */4 * *"
+  workflow_dispatch:
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    name: Validate a Pull Request
+    steps:
+      - uses: actions/checkout@v3.3.0
+        
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: phantomic
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: build
+        uses: docker/build-push-action@v3
+        with:
+          tags: phantomic/astroneer:latest
+          push: true
